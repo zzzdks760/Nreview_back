@@ -8,5 +8,16 @@
     session 값 확인: <p th:text="${session.loginEmail}"></p>
     <a href="/member/update">내 정보 수정하기</a>
     <a href="/member/logout">로그아웃</a>
+    <button onclick="writeReq()">글작성</button>
+    <a href="/member/board/write">글작성</a>
 </body>
+<script>
+//    function writeReq() {
+//
+//    }
+
+    const writeReq = () => {
+        location.href = "/member/board/write";
+    }
+</script>
 </html>
