@@ -96,10 +96,16 @@ public class MemberController {
         return checkResult;
     }
 /////////////////////////////////////게시판//////////////////////////////
-
-    @GetMapping("member/board/write")
-    public String writeForm() {
-        return "write";
-    }
+//@RequestMapping("/member/board")
+//
+//    @GetMapping("/write")
+//    public String writeForm() {
+//        return "write";
+//    }
+//
+//    @PostMapping("/write")
+//    public String write() {
+//        return null;
+//    }
 
 }
