@@ -46,4 +46,24 @@ public class BoardController {
         model.addAttribute("board", boardDTO);
         return "boardDetail";
     }
+    // 수정버튼 클릭시 페이지
+    @GetMapping("/member/board/boardUpdate/{id}")
+    public String updateForm(@PathVariable Long id, Model model) {
+        BoardDTO boardDTO = boardService.findById(id);
+        model.addAttribute("boardUpdate", boardDTO);
+        return "boardUpdate";
+    }
+    // 수정완료시 페이지
+    @PostMapping("/member/board/boardUpdate")
+    public String update(@ModelAttribute BoardDTO boardDTO, Model model) {
+        BoardDTO board = boardService.update(boardDTO);
+        model.addAttribute("board", board);
+        return "boardDetail";
+    }
+
+    @GetMapping("/member/board/boardDelete/{id}")
+    public String delete(@PathVariable Long id) {
+        boardService.delete(id);
+        return "redirect:/member/board/boardlist";
+    }
 }
