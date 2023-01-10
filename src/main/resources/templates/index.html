@@ -9,5 +9,13 @@
 <a href="/member/save">회원가입</a>
 <a href="/member/login">로그인</a>
 <a href="/member/">회원목록</a>
+<button onclick="boardlistReq()">글목록</button>
 </body>
+
+<script>
+    const boardlistReq = () => {
+        location.href = "/member/board/boardlist";
+    }
+</script>
+
 </html>

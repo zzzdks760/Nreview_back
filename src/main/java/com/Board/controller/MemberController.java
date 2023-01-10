@@ -95,17 +95,5 @@ public class MemberController {
         String checkResult = memberService.emailCheck(memberEmail);
         return checkResult;
     }
-/////////////////////////////////////게시판//////////////////////////////
-//@RequestMapping("/member/board")
-//
-//    @GetMapping("/write")
-//    public String writeForm() {
-//        return "write";
-//    }
-//
-//    @PostMapping("/write")
-//    public String write() {
-//        return null;
-//    }
 
 }
